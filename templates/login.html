@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block body %}
+ {% if result.error %}
+ <h2>Damn that error: {{ result.error.message }}</h2>
+ {% endif %}
+ {% if result.user %}
+ <script type="text/javascript">
+     window.location.href = "{{ url_for('dns_page') }}";
+ </script>
+ {% endif %}
+{% endblock %}

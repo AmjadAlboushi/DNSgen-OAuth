@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DNS Zone Management</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>DNS Zone Management</h1>
+        <form id="dnsForm">
+            <label for="action">Actie:</label><br>
+            <select id="action" name="action">
+                <option value="check">Check</option>
+                <option value="update">Update</option>
+                <option value="clear">Clear</option>
+                <option value="add">Add</option>
+            </select><br>
+            <label for="fqdn">FQDN:</label><br>
+            <input type="text" id="fqdn" name="fqdn"><br>
+            <label for="ipv4">IPv4:</label><br>
+            <input type="text" id="ipv4" name="ipv4"><br>
+            <input type="submit" value="Uitvoeren">
+        </form>
+        <div id="result"></div>
+    </div>
+</body>
+<script src="/static/script.js"></script>
+</html>
